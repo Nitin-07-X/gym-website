@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/registration.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#btnLoggedUser").click(function () {
+          debugger;
+          var name = $("#logName").val();
+          var password = $("#logPassword").val();
+          if (name == "" || password == "") {
+            alert("Please enter username and password !");
+            return false;
+          } else {
+            var loggedUser = JSON.parse(localStorage.getItem(name));
+            if (loggedUser == null) {
+              alert("Please enter valid user!");
+              return false;
+            } else {
+              var userPass = loggedUser[0].userPass;
+              if (password == userPass) {
+                alert("Log in Successfully!");
+                window.location.replace("index.html");
+              } else {
+                alert("Please enter valid password!");
+                return false;
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form class="registration-form">
+      <h2>Gym Login Form</h2>
+      <label for="name">Full Name:</label>
+      <input type="text" id="logName" name="name" /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="logPassword" name="password" /><br /><br />
+
+      <div class="btn">
+        <div class="login" id="btnLoggedUser" value="login">Login</div>
+        <div class="submit"><a href="registration.html">Sign Up</a></div>
+      </div>
+    </form>
+  </body>
+</html>

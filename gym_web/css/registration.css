@@ -1,0 +1,89 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(image/reg-img.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.registration-form {
+  max-width: 400px;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
+}
+.registration-form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(203, 201, 201, 0.845);
+  border: 1px solid #b5b4b4;
+  border-radius: 10px;
+}
+
+select {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(203, 201, 201, 0.845);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.btn {
+  display: flex;
+  justify-content: space-around;
+}
+.btn div a {
+  color: #fff;
+  text-decoration: none;
+}
+.login,
+.submit {
+  width: 25%;
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: larger;
+  border-radius: 10px;
+}
+
+.submit:hover {
+  background: #3e8e41;
+}
+.login:hover {
+  background: #3e8e41;
+}
+
+.back-home {
+  height: 30px;
+  width: 120px;
+  background-color: #4caf50;
+  float: right;
+  margin-top: -630px;
+  margin-right: 100px;
+  padding-top: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+.back-home a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}

@@ -1,0 +1,333 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  overflow-x: hidden;
+  background-color: #282828;
+}
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0 30px;
+}
+
+header nav .logo {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .logo img {
+  width: 100%;
+}
+
+header nav .logo h1 {
+  font-size: 40px;
+  color: white;
+}
+header nav .logo h1 span {
+  color: #f79631;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  height: 60px;
+}
+.nav-list {
+  list-style: none;
+  display: inline-flex;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 30px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.nav-list li a:hover {
+  cursor: pointer;
+  color: #f79631;
+}
+
+.Join-btn {
+  background: #f79631;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.Join-btn:hover {
+  background: transparent;
+  border: 1px solid #f79631;
+  transition: 0.5s ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.container-heading {
+  width: 60%;
+  font-size: 2rem;
+  color: white;
+  margin-top: 50px;
+}
+.container-heading p {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.find-gym {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.find-gym-button {
+  width: 40%;
+  height: 48px;
+  padding-top: 20px;
+  background-color: rgb(179, 110, 13);
+  color: white;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  transition: all;
+  transition-duration: 0.5s;
+}
+.find-gym-button:hover {
+  width: 40%;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.section-card {
+  width: 65%;
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+.card {
+  width: 50%;
+  height: 800px;
+  background-color: rgb(117, 116, 116);
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid #373636;
+}
+.card-img {
+  width: 100%;
+  height: 45%;
+  background-image: url(training_img/training1.jpg);
+  background-size: cover;
+}
+.card h1 {
+  margin-top: 10%;
+  font-size: 1.8rem;
+}
+.card p {
+  margin-top: 8%;
+  font-size: 1.6rem;
+}
+#card-img2 {
+  background-image: url(training_img/training2.jpg);
+}
+#card-img3 {
+  background-image: url(training_img/training3.jpg);
+}
+
+/* footer section  */
+
+.footer {
+  width: 100vw;
+  background: #2e2d2d;
+  padding: 20px;
+}
+.footer .container {
+  width: 100vw;
+  padding: 60px;
+  margin: 0 auto;
+}
+.footer .container .row {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: justify;
+}
+.row .footer-links {
+  width: 260px;
+  margin: 0 50px;
+  margin-bottom: 30px;
+  color: white;
+}
+.row .footer-links div {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.row .footer-links li {
+  list-style: none;
+  margin: 14px 0;
+}
+.footer-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.footer-links li a:hover {
+  color: #eeb12d;
+}
+
+.footer-links .social-links {
+  margin-top: 40px;
+}
+.footer-links .social-links a {
+  text-decoration: none;
+  color: #dfdede;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.copyright {
+  padding: 14px 0;
+  text-align: center;
+}
+.copyright p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+hr {
+  border: 1px solid #575656;
+}
+
+#menu-icon {
+  font-size: 1.6rem;
+  display: none;
+  cursor: pointer;
+  color: white;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 730px) {
+  .nav-list li a {
+    margin: 0 12px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 730px) {
+  #menu-icon {
+    display: block;
+  }
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    background: #f79631;
+    right: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 10px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .nav-list li {
+    margin: 12px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .container-heading {
+    font-size: 1.4rem;
+  }
+  .container-heading p {
+    font-size: 1.3rem;
+  }
+  .card {
+    height: 700px;
+  }
+
+  .card h1 {
+    font-size: 1.7rem;
+  }
+  .card p {
+    font-size: 1.3rem;
+  }
+  .find-gym-button {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .container-heading {
+    font-size: 1.8rem;
+  }
+  .container-heading p {
+    font-size: 1.5rem;
+  }
+  .section-card {
+    height: 2500px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+    height: 800px;
+  }
+  .card h1 {
+    font-size: 1.8rem;
+  }
+  .card p {
+    font-size: 1.6rem;
+  }
+  .footer .container {
+    display: flex;
+    align-items: center;
+  }
+  .footer .container .row {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .row .footer-links div {
+    font-size: 1.9rem;
+  }
+  .footer-links li a {
+    font-size: 1.3rem;
+  }
+  .footer-links .social-links a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container-heading {
+    font-size: 0.8rem;
+  }
+  .container-heading p {
+    font-size: 0.4rem;
+  }
+  .find-gym-button {
+    width: 50%;
+    font-size: 0.8rem;
+  }
+  .card {
+    width: 90%;
+    height: 900px;
+  }
+  .join-btn {
+    width: 20%;
+  }
+}

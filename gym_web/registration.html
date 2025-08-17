@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/registration.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      var arrUsersValue = "";
+      $(document).ready(function () {
+        $("#btnsubmit").click(function () {
+          debugger;
+          var name = $("#name").val();
+          var password = $("#password").val();
+          var phone = $("#phone").val();
+          var membership = $("#membership").val();
+
+          if (
+            name == null ||
+            password == null ||
+            phone == null ||
+            membership == null
+          ) {
+            alert("Please enter required field!");
+            return false;
+          } else {
+            arrUsersValue = new Array();
+            arrUsersValue.push({
+              userName: name,
+              userPass: password,
+              userPhone: phone,
+              userMem: membership,
+            });
+            alert("Register successfully plz Login");
+            localStorage.setItem(name, JSON.stringify(arrUsersValue));
+          }
+        });
+      });
+
+      const signup = async () => {
+        const res = await fetch("http://localhost:8080/api/auth/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: "Anirudh Yadav",
+            email: "yanirudh668@gmail.com",
+            password: "123456",
+          }),
+        });
+
+        const data = await res.text(); // or .json()
+        console.log(data);
+      };
+    </script>
+  </head>
+  <body>
+    <form class="registration-form">
+      <h2>Gym Registration Form</h2>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" /><br /><br />
+      <label for="membership">Membership Type:</label>
+      <select id="membership" name="membership">
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="Bronz">Bronz</option></select
+      ><br /><br />
+      <div class="btn">
+        <div class="submit" id="btnsubmit" value="submit">Sign Up</div>
+        <div class="login"><a href="login.html">Login</a></div>
+      </div>
+    </form>
+    <div class="back-home"><a href="index.html">Back To Home</a></div>
+  </body>
+</html>
